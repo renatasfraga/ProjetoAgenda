@@ -1,0 +1,12 @@
+Daily meeting 08/11:
+
+O que foi feito aula passada?
+Diego: Não veio na aula. 
+Felipe: Criação do modelo ER
+Renata: Organização do ambiente, TFS e Github
+
+O que será feito hoje?
+Diego: Back-end de adicionar eventos
+Felipe: Front-end da tela adicionar eventos utilizando bootstrap
+Renata: Auxílio na organização do ambiente dos meninos no Git, e parte de persistência no PHP. 
+
