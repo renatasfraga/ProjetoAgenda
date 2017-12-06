@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class Conexao {
     private static $instancia;
@@ -16,7 +16,7 @@ class Conexao {
         if(!isset(self::$instancia)) {
             try {
                 
-                define("PORT", "3306");
+                define("PORT", "3307");
                 define("DB", "agenda_familiar");
                 define("END", "127.0.0.1");
                 define("USER", "root");

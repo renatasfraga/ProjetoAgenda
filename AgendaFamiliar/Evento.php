@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class Evento {
         private $codEvento;
@@ -7,19 +7,34 @@ class Evento {
         private $descricao;
         private $dtIni;
         private $dtFim;
+        private $hrInicio;
+        private $hrFim;
         private $usuarioEmail;
         
-        public function __construct($nome,$local,$descricao,$dtIni,$dtFim,$usuarioEmail) {
+        public function __construct($nome,$local,$descricao,$dtIni,$dtFim,
+            $hrInicio, $hrFim,$usuarioEmail) {
             $this->nome = $nome;
             $this->local = $local; 
             $this->descricao = $descricao;
             $this->dtIni = $dtIni;
             $this->dtFim = $dtFim;
+            $this->hrInicio = $hrInicio;
+            $this->hrFim = $hrFim;
             $this->usuarioEmail = $usuarioEmail;
             
             
         }
         
+        
+        
+        /**
+         * @param mixed $codEvento
+         */
+        public function setCodEvento($codEvento)
+        {
+            $this->codEvento = $codEvento;
+        }
+    
         /**
          * @return mixed
          */
@@ -107,8 +122,42 @@ class Evento {
         {
             $this->dtFim = $dtFim;
         }
-    
         
+        
+        
+        
+        /**
+         * @return mixed
+         */
+        public function getHrInicio()
+        {
+            return $this->hrInicio;
+        }
+    
+        /**
+         * @return mixed
+         */
+        public function getHrFim()
+        {
+            return $this->hrFim;
+        }
+    
+        /**
+         * @param mixed $hrInicio
+         */
+        public function setHrInicio($hrInicio)
+        {
+            $this->hrInicio = $hrInicio;
+        }
+    
+        /**
+         * @param mixed $hrFim
+         */
+        public function setHrFim($hrFim)
+        {
+            $this->hrFim = $hrFim;
+        }
+    
         public function setUsuarioEmail($usuarioEmail) {
             $this->usuarioEmail = $usuarioEmail; 
         }

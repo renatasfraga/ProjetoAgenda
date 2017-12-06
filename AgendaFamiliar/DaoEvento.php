@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 class DaoEvento implements iDaoModeCrud {
     
@@ -41,10 +41,13 @@ class DaoEvento implements iDaoModeCrud {
         $descricao = $objeto->getDescricao();
         $dtIni = $objeto->getDtIni();
         $dtFim = $objeto->getDtFim();
+        $hrInicio = $objeto->getHrInicio();
+        $hrFim = $objeto->getHrFim(); 
+        
         $usuarioEmail = $objeto->getUsuarioEmail();
         
-        $sqlStmt = "INSERT INTO {$this->tabela} (nome,local_evento,descricao,dt_ini,dt_fim,usuario_email)  
-                            VALUES(:nome,:local,:descricao,:dtIni,:dtFim,:usuarioEmail)";
+        $sqlStmt = "INSERT INTO {$this->tabela} (nome,local_evento,descricao,dt_ini,dt_fim,hr_ini,hr_fim,usuario_email)  
+                            VALUES(:nome,:local,:descricao,:dtIni,:dtFim,:hr_ini,:hr_fim,:usuarioEmail)";
         
         try {
             $operacao = $this->instanciaConexaoPdoAtiva->prepare($sqlStmt);
@@ -53,6 +56,8 @@ class DaoEvento implements iDaoModeCrud {
             $operacao->bindValue(":descricao",$descricao,PDO::PARAM_STR);
             $operacao->bindValue(":dtIni",$dtIni,PDO::PARAM_STR);
             $operacao->bindValue(":dtFim",$dtFim,PDO::PARAM_STR);
+            $operacao->bindValue(":hr_ini",$hrInicio,PDO::PARAM_STR);
+            $operacao->bindValue(":hr_fim", $hrFim,PDO::PARAM_STR);
             $operacao->bindValue(":usuarioEmail",$usuarioEmail,PDO::PARAM_STR);
             if($operacao->execute()) {
               if($operacao->rowCount() > 0) {
@@ -76,10 +81,13 @@ class DaoEvento implements iDaoModeCrud {
         $descricao = $objeto->getDescricao();
         $dtIni = $objeto->getDtIni();
         $dtFim = $objeto->getDtFim();
-        $usuarioEmail = $objeto->getUsuarioEmail();
-        $sqlStmt = "UPDATE {$this->tabela} SET NOME=:nome, LOCAL=:local,
+        $hrInicio = $objeto->getHrInicio();
+        $hrFim = $objeto->getHrFim(); 
+        
+        $sqlStmt = "UPDATE {$this->tabela} SET NOME=:nome, LOCAL_EVENTO=:local,
                            DESCRICAO=:descricao, DT_INI=:dtIni, DT_FIM=:dtFim,
-                            USUARIO_EMAIL=:usuarioEmail 
+                           HR_INI=:hr_ini, HR_FIM=:hr_fim
+                             
                             WHERE COD_EVENTO=:codEvento";
         try {
             $operacao=  $this->instanciaConexaoPdoAtiva->prepare($sqlStmt);
@@ -89,7 +97,9 @@ class DaoEvento implements iDaoModeCrud {
             $operacao->bindValue(":descricao",$descricao, PDO::PARAM_STR);
             $operacao->bindValue(":dtIni",$dtIni, PDO::PARAM_STR);
             $operacao->bindValue(":dtFim",$dtFim, PDO::PARAM_STR);
-            $operacao->bindValue(":usuarioEmail",$usuarioEmail, PDO::PARAM_STR);
+            $operacao->bindValue(":hr_ini",$hrInicio,PDO::PARAM_STR);
+            $operacao->bindValue(":hr_fim", $hrFim,PDO::PARAM_STR);
+           
             if($operacao->execute()) {
                 if($operacao->rowCount() > 0) {
                     return true;
@@ -125,7 +135,11 @@ class DaoEvento implements iDaoModeCrud {
             
         }
         
+        
+        
     }
+    
+    
     
     
     
