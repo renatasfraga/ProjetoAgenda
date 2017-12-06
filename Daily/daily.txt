@@ -1,4 +1,4 @@
-Daily meeting 08/11:
+﻿Daily meeting 08/11:
 
 O que foi feito aula passada?
 Diego: Não veio na aula. 
@@ -10,3 +10,29 @@ Diego: Back-end de adicionar eventos
 Felipe: Front-end da tela adicionar eventos utilizando bootstrap
 Renata: Auxílio na organização do ambiente dos meninos no Git, e parte de persistência no PHP. 
 
+
+
+Daily meeting 22/11:
+O que foi feito aula passada?
+Diego: Entidade Evento (métodos getters e setters, construtor) 
+Felipe: Front-end modal (semipronto) 
+Renata:Back-end do evento (modelagem do banco, persistência, padrão DAO) 
+
+
+O que será feito hoje? 
+Diego: Modelagem de usuário 
+Felipe: mescla do back e do front-end 
+Renata: mescla do back e do front-end 
+
+
+Daily meeting 29/11:
+O que foi feito aula passada?
+Diego:  Modelagem de usuário
+Felipe: Início do menu e da tela de login
+Renata: Persistência de evento 
+
+
+O que será feito hoje? 
+Diego: crud de usuário
+Felipe: ícones de menu  
+Renata: integração do back e do front de evento
