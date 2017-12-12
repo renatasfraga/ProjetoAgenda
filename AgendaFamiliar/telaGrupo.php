@@ -180,14 +180,12 @@ try {
             </div>
           </div>
 
-
 			<!-- Modal Structure -->
 		<div id="modalatualizar" class="modal">
 			<div class="modal-content">
-				<h4>Novo Evento</h4>
+				<h4>Editar Grupo</h4>
 				<div class="row">
-				<!--nome, dt_ini, hr_ini, dt_fim,hr_fim ,local_evento,usuario_email, descricao,cod_evento FROM evento';
-    -->
+				
 		          	<form class="col s12" method="post" action="atualizarGrupo.php">
 			            <div class="row">
 			               <div class="input-field col s12">
@@ -209,12 +207,14 @@ try {
 		          	</form>
 		        </div>
 			</div>
+		
 		</div>
 
 
 
 </html>
 <?php
+
     }
 } catch (PDOException $e) {
     print $e->getMessage();

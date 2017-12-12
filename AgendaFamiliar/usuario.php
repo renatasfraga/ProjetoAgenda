@@ -253,7 +253,7 @@ try {
 			<!-- Modal Structure -->
 		<div id="modalatualizar" class="modal">
 			<div class="modal-content">
-				<h4>Novo Evento</h4>
+				<h4>Editar Evento</h4>
 				<div class="row">
 				<!--nome, dt_ini, hr_ini, dt_fim,hr_fim ,local_evento,usuario_email, descricao,cod_evento FROM evento';
     -->
